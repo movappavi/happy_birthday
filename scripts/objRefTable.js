@@ -115,7 +115,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Plugins.Photon.Exps.StateString,
-		C3.Plugins.Photon.Exps.MyRoomName
+		C3.Plugins.Photon.Exps.MyRoomName,
+		C3.Plugins.System.Cnds.OnLoadFinished
 	];
 };
 self.C3_JsPropNameTable = [
@@ -162,6 +163,7 @@ self.C3_JsPropNameTable = [
 	{Door: 0},
 	{User_button: 0},
 	{Текст: 0},
+	{Спрайт2: 0},
 	{НомерСвободнойКомнаты: 0},
 	{счётчикПроверокПодключения: 0},
 	{is_view_all: 0},
@@ -204,5 +206,6 @@ self.InstanceType = {
 	room_9patch: class extends self.IWorldInstance {},
 	Door: class extends self.ISpriteInstance {},
 	User_button: class extends self.ISpriteInstance {},
-	Текст: class extends self.ITextInstance {}
+	Текст: class extends self.ITextInstance {},
+	Спрайт2: class extends self.ISpriteInstance {}
 }
