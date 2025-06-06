@@ -7114,17 +7114,6 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			return () => (and(((("Вы находитесь на локации '" + "\n") + n0.ExpInstVar()) + "' ("), n1.ExpInstVar()) + ")");
 		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => (f0()).toString();
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const n1 = p._GetNode(1);
-			const n2 = p._GetNode(2);
-			const n3 = p._GetNode(3);
-			return () => and((and((and(and(n0.ExpInstVar(), "|"), n1.ExpObject()) + "|"), n2.ExpObject()) + "|"), n3.ExpObject());
-		},
 		() => "Main",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -7271,8 +7260,8 @@ self.C3_ExpressionFuncs = [
 			return () => ((((v0.GetValue()) === (1) ? 1 : 0)) ? (0) : (1));
 		},
 		() => 50,
-		() => 100,
 		() => 5,
+		() => 100,
 		() => "set_new_players_position",
 		() => 3,
 		p => {
@@ -7302,6 +7291,10 @@ self.C3_ExpressionFuncs = [
 		() => 52,
 		() => 53,
 		() => "Main_up",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0()).toString();
+		},
 		() => 54,
 		p => {
 			const n0 = p._GetNode(0);
