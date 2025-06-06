@@ -7160,6 +7160,10 @@ self.C3_ExpressionFuncs = [
 			const f2 = p._GetNode(2).GetBoundMethod();
 			return () => f0(f1(f2(), 6, "|"));
 		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0()).toString();
+		},
 		() => 99,
 		() => 2,
 		p => {
@@ -7288,14 +7292,11 @@ self.C3_ExpressionFuncs = [
 		() => 0.1,
 		() => "Вы допустили ошибку. Попробуйте \nизменить ответы, чтобы открыть дверь",
 		() => "Admin",
+		() => "admin_main",
 		() => 51,
 		() => 52,
 		() => 53,
 		() => "Main_up",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => (f0()).toString();
-		},
 		() => 54,
 		p => {
 			const n0 = p._GetNode(0);
