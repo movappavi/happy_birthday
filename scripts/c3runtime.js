@@ -7068,17 +7068,22 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
 		},
-		() => 15,
 		() => "roki_admin",
+		() => "up",
 		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => ("\n" + f0());
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
+			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			const n2 = p._GetNode(2);
-			return () => f0((n1.ExpObject() / n2.ExpObject()));
+			return () => (((((n0.ExpObject() + 1)) === (n1.ExpObject()) ? 1 : 0)) ? (0) : ((n2.ExpObject() + 1)));
+		},
+		() => 1,
+		() => "down",
+		() => "head",
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			const n2 = p._GetNode(2);
+			return () => (((((n0.ExpObject() - 1)) < (0) ? 1 : 0)) ? (n1.ExpObject()) : ((n2.ExpObject() - 1)));
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -7086,26 +7091,39 @@ self.C3_ExpressionFuncs = [
 			return () => f0(n1.ExpObject());
 		},
 		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
+		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
 			return () => f0(n1.ExpInstVar());
 		},
-		() => 1,
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			const n2 = p._GetNode(2);
+			const n3 = p._GetNode(3);
+			const n4 = p._GetNode(4);
+			const n5 = p._GetNode(5);
+			const n6 = p._GetNode(6);
+			return () => and((and((and((and((and((and(and(n0.ExpInstVar(), "|"), n1.ExpObject()) + "|"), n2.ExpObject()) + "|"), n3.ExpObject()) + "|"), n4.ExpInstVar()) + "|"), n5.ExpInstVar()) + "|"), n6.ExpInstVar());
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			return () => (and(((("Вы находитесь на локации '" + "\n") + n0.ExpInstVar()) + "' ("), n1.ExpInstVar()) + ")");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0()).toString();
+		},
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			const n2 = p._GetNode(2);
 			const n3 = p._GetNode(3);
 			return () => and((and((and(and(n0.ExpInstVar(), "|"), n1.ExpObject()) + "|"), n2.ExpObject()) + "|"), n3.ExpObject());
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const n1 = p._GetNode(1);
-			return () => ((and((("Вы находитесь на " + n0.ExpInstVar()) + "("), n1.ExpInstVar()) + ")") + " локации");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => (f0()).toString();
 		},
 		() => "Main",
 		p => {
@@ -7135,11 +7153,39 @@ self.C3_ExpressionFuncs = [
 		() => 900,
 		() => 1500,
 		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const f2 = p._GetNode(2).GetBoundMethod();
+			return () => f0(f1(f2(), 4, "|"));
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const f2 = p._GetNode(2).GetBoundMethod();
+			return () => f0(f1(f2(), 5, "|"));
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const f2 = p._GetNode(2).GetBoundMethod();
+			return () => f0(f1(f2(), 6, "|"));
 		},
 		() => 99,
 		() => 2,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => and("r_", n0.ExpInstVar());
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpBehavior();
+		},
+		() => 90,
+		() => 270,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => and("i_", n0.ExpInstVar());
+		},
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
@@ -7235,11 +7281,11 @@ self.C3_ExpressionFuncs = [
 			return () => and(and(n0.ExpObject(), "|"), n1.ExpObject());
 		},
 		() => "open_door",
-		() => 4,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 1);
 		},
+		() => 4,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(and(v0.GetValue(), "|"), 1);
@@ -7256,14 +7302,6 @@ self.C3_ExpressionFuncs = [
 		() => 52,
 		() => 53,
 		() => "Main_up",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 75);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() - 75);
-		},
 		() => 54,
 		p => {
 			const n0 = p._GetNode(0);
@@ -7284,7 +7322,7 @@ self.C3_ExpressionFuncs = [
 		() => "say",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("Оксмарт, это лучшее, что со мною случалось", "Давайте подышим?", "Давайте что-нибудь замутим?", "Писать хочу...", "Где тут туалет?", "Танцы - хуянцы! То ли дело пилатес :)");
+			return () => f0("Оксмарт, это лучшее, что со мною случалось", "Я люблю Рому, а Рома любит меня ❤️", "❤️", "Сидим с бобром за столом... ", "шака-фака, шака-фака", "Давайте что-нибудь замутим?", "Писать хочу", "Где тут туалет?", "Танцы - хуянцы! То ли дело пилатес :)", "Кушать хочу");
 		},
 		() => "do",
 		() => "throw",
@@ -7305,6 +7343,10 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject()).toString();
+		},
+		p => {
+			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() * 0.66);
 		},
 		() => "UI",
@@ -7319,10 +7361,6 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() * 100);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => and((("Вам добавлен 1 снаряд. " + "\n") + "Всего снарядов: "), v0.GetValue());
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
