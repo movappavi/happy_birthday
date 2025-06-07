@@ -130,6 +130,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.DragnDrop.Acts.Drop,
 		C3.Plugins.Text.Cnds.OnTypewriterTextFinished,
 		C3.Plugins.Text.Exps.Count,
+		C3.Behaviors.Fade.Acts.SetWaitTime,
 		C3.Plugins.System.Cnds.ForEachOrdered,
 		C3.Plugins.Text.Exps.UID,
 		C3.Plugins.Text.Cnds.OnDestroyed,
@@ -223,6 +224,9 @@ self.C3_JsPropNameTable = [
 	{PlayerHead: 0},
 	{PlayerFace: 0},
 	{Текст: 0},
+	{photo_5330086803140637696_y: 0},
+	{Текст3: 0},
+	{pngtransparentpixelartheart8bitcolorhearttextrectanglestickerthumbnail: 0},
 	{myHead: 0},
 	{myFace: 0},
 	{myDown: 0},
@@ -237,6 +241,8 @@ self.C3_JsPropNameTable = [
 	{random_dialog: 0},
 	{Переменная1: 0},
 	{notification_text: 0},
+	{time_print: 0},
+	{time_to_life: 0},
 	{notification_count: 0},
 	{myName: 0}
 ];
@@ -290,5 +296,8 @@ self.InstanceType = {
 	SkinHead: class extends self.ISpriteInstance {},
 	PlayerHead: class extends self.ISpriteInstance {},
 	PlayerFace: class extends self.ISpriteInstance {},
-	Текст: class extends self.ITextInstance {}
+	Текст: class extends self.ITextInstance {},
+	photo_5330086803140637696_y: class extends self.ISpriteInstance {},
+	Текст3: class extends self.ITextInstance {},
+	pngtransparentpixelartheart8bitcolorhearttextrectanglestickerthumbnail: class extends self.ISpriteInstance {}
 }

@@ -7113,8 +7113,9 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
-			return () => (and(((("Вы находитесь на локации '" + "\n") + n0.ExpInstVar()) + "' ("), n1.ExpInstVar()) + ")");
+			return () => (and((((("Вы находитесь на локации " + "\n") + "'") + n0.ExpInstVar()) + "' ("), n1.ExpInstVar()) + ")");
 		},
+		() => 6,
 		() => "Main",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -7290,10 +7291,9 @@ self.C3_ExpressionFuncs = [
 			return () => and(and(v0.GetValue(), "|"), 0);
 		},
 		() => 0.1,
-		() => "Вы допустили ошибку. Попробуйте \n\nизменить ответы, чтобы открыть дверь",
+		() => "Вы допустили ошибку. Попробуйте \nизменить ответы, чтобы открыть \nдверь",
 		() => "Admin",
 		() => "admin_main",
-		() => "Вы допустили ошибку. Попробуйте \nизменить ответы, чтобы открыть дверь",
 		() => 51,
 		() => 52,
 		() => 53,
@@ -7340,10 +7340,6 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject()).toString();
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() * 0.66);
 		},
 		() => "UI",
 		p => {
