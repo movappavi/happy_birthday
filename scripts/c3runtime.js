@@ -7265,9 +7265,7 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => ((((v0.GetValue()) === (1) ? 1 : 0)) ? (0) : (1));
 		},
-		() => 50,
 		() => 5,
-		() => 100,
 		() => "set_new_players_position",
 		() => 3,
 		p => {

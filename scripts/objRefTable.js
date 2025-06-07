@@ -107,7 +107,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetDefaultColor,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Plugins.Sprite.Cnds.CompareX,
-		C3.Plugins.Text.Acts.SetOpacity,
 		C3.Plugins.Sprite.Exps.PickedCount,
 		C3.Plugins.Sprite.Exps.Count,
 		C3.Plugins.NinePatch.Cnds.CompareInstanceVar,
